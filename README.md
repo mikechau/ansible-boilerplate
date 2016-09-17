@@ -18,6 +18,8 @@ playbooks. `git clone` this project and be on your merry way.
 - `git clone --depth=1 --branch=master https://github.com/mikechau/ansible-boilerplate.git` - clone the latest copy of the repo
 - `cd ansible-boilerplate && git remote rm origin` - remove the origin
 
+---
+
 ### Directory structure
 
 ```
@@ -43,7 +45,9 @@ This is a project specific configuration file to configure Ansible. [View](ansib
 to see a more detailed explanation of the default settings provided by this
 project.
 
-- [Ansible.cfg](http://docs.ansible.com/ansible/intro_configuration.html)
+##### Read more
+
+- [Ansible.cfg - http://docs.ansible.com/ansible/intro_configuration.html](http://docs.ansible.com/ansible/intro_configuration.html)
 
 #### galaxy_roles
 
@@ -52,7 +56,9 @@ This is where you should install your third-party roles from [Ansible Galaxy](ht
 Recommended to configure [requirements.yml](requirements.yml) with the third party roles you are
 using.
 
-- [Ansible Galaxy](http://docs.ansible.com/ansible/galaxy.html)
+##### Read more
+
+- [Ansible Galaxy - http://docs.ansible.com/ansible/galaxy.html](http://docs.ansible.com/ansible/galaxy.html)
 
 #### inventories
 
@@ -180,21 +186,35 @@ Example:
         └── rails.yml
 ```
 
-- [Inventory](http://docs.ansible.com/ansible/intro_inventory.html)
-- [Variables](http://docs.ansible.com/ansible/playbooks_variables.html)
+##### Read More
+
+- [Inventory - http://docs.ansible.com/ansible/intro_inventory.html](http://docs.ansible.com/ansible/intro_inventory.html)
+- [Variables - http://docs.ansible.com/ansible/playbooks_variables.html](http://docs.ansible.com/ansible/playbooks_variables.html)
+
+---
 
 #### log
 
 By default this is just a symlink to `tmp/ansible.log`.
 
+---
+
 #### notes
 
 This is where you can add your notes for things like manual configuration.
+
+---
 
 #### playbooks
 
 This is where [playbooks](http://docs.ansible.com/ansible/playbooks.html)
 should be placed.
+
+##### Read More
+
+- [Playbooks - http://docs.ansible.com/ansible/playbooks.html](http://docs.ansible.com/ansible/playbooks.html)
+
+---
 
 #### requirements.yml
 
@@ -206,18 +226,26 @@ Then install your roles with this command:
 ansible-galaxy install -r requirements.yml
 ```
 
-[Ansible Galaxy - requirements](http://docs.ansible.com/ansible/galaxy.html#advanced-control-over-role-requirements-files)
+[Ansible Galaxy - requirements - http://docs.ansible.com/ansible/galaxy.html#advanced-control-over-role-requirements-files](http://docs.ansible.com/ansible/galaxy.html#advanced-control-over-role-requirements-files)
+
+---
 
 #### roles
 
-This is where you can add your custom Ansible roles for usage by your playbooks.
+This is where you can add your custom Ansible [roles](http://docs.ansible.com/ansible/playbooks_roles.html#roles) for usage by your playbooks.
 
-[Roles](http://docs.ansible.com/ansible/playbooks_roles.html#roles)
+##### Read more
+
+[Roles - http://docs.ansible.com/ansible/playbooks_roles.html#roles](http://docs.ansible.com/ansible/playbooks_roles.html#roles)
+
+---
 
 #### tmp
 
 A tmp directory for convenience. For example, you may prefer to write logs
 here.
+
+---
 
 ### LICENSE
 
