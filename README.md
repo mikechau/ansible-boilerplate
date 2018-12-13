@@ -5,7 +5,13 @@ playbooks. `git clone` this project and be on your merry way.
 
 ## Prerequisites
 
-### Install ansible
+### Use pyenv and pipenv (recommended)
+
+You may want to use [pyenv](https://github.com/pyenv/pyenv) and [pipenv](https://github.com/pypa/pipenv) to manage your Python interpreter version and your virtualenv.
+
+### Install Ansible (traditional method)
+
+If you want to use pipenv, you can skip this step
 
 #### pip
 
@@ -17,6 +23,11 @@ playbooks. `git clone` this project and be on your merry way.
 
 - `git clone --depth=1 --branch=master https://github.com/mikechau/ansible-boilerplate.git` - clone the latest copy of the repo
 - `cd ansible-boilerplate && git remote rm origin` - remove the origin
+
+#### Initialize the project (if you use pipenv)
+
+- `pipenv install` - create a project, initialize the virtualenv, and install dependencies
+- `pipenv install --dev molecule docker` - add development dependencies to the project (optionnal)
 
 ---
 
