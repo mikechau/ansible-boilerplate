@@ -7,27 +7,37 @@ Forked from the [Ansible Boilerplate](https://github.com/mikechau/ansible-boiler
 
 ## Prerequisites
 
-### Use pyenv and pipenv (recommended)
+### Install venv
 
-You may want to use [pyenv](https://github.com/pyenv/pyenv) and [pipenv](https://github.com/pypa/pipenv) to manage your Python interpreter version and your virtualenv.
-
-### Install Ansible (traditional method)
-
-If you want to use pipenv, you can skip this step
-
-#### pip
-
-- `pip install ansible` (may need to run this as `sudo`)
+- `pip3 install pipenv` (may need to run this as `sudo`)
 
 ## Getting started
 
 ### Git clone
 
-- `git clone --depth=1 --branch=master https://github.com/lucasmaurice/ansible-boilerplate.git` - clone the latest copy of the repo
-- `mv ansible-boilerplate ansible-homelab-infrastructure` - rename to the infrastructure name
-- `cd ansible-homelab-infrastructure && git remote rm origin` - remove the origin
-- `git remote add origin git@github.com:lucasmaurice/ansible-homelab-infrastructure.git` - add your own infrastructure origin
-- `git push -u origin master` - push the repository to your own git
+```shell
+# Clone the latest copy of the repo
+git clone --depth=1 --branch=master https://github.com/lucasmaurice/ansible-boilerplate.git
+# Rename to the infrastructure name
+mv ansible-boilerplate ansible-homelab-infrastructure
+# Remove the origin
+cd ansible-homelab-infrastructure && git remote rm origin
+# Add your own infrastructure origin
+git remote add origin git@github.com:lucasmaurice/ansible-homelab-infrastructure.git
+# Push the repository to your own git
+git push -u origin master
+```
+
+### Make commands
+
+
+| Command                                       | What does it do?                                                                   |
+| --------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `make venv`                                   | Create a virtual environement with all the dependency to run ansible               |
+| `make test`                                   | Run all roles molecule tests.                                                      |
+| `galaxy-install`                              | Install missing galaxy roles.                                                      |
+
+
 
 ---
 
@@ -35,20 +45,28 @@ If you want to use pipenv, you can skip this step
 
 ```
 .
-├── ansible.cfg
 ├── galaxy_roles
 ├── inventories
 │   ├── group_vars
 │   └── host_vars
-├── LICENSE
-├── log -> /tmp/ansible.log
 ├── notes
 ├── playbooks
-├── README.md
-├── requirements.yml
 ├── roles
-└── tmp
+├── tmp
+├── .gitignore
+├── .travis.yml
+├── ansible.cfg
+├── env-requirements.txt
+├── galaxy-requirements.yml
+├── LICENSE
+├── log -> /tmp/ansible.log
+├── Makefile
+└── README.md
 ```
+
+#### env-requirements.txt
+
+[env-requirements.txt](env-requirements.txt) is the python dependancies needed for the make deploiement script.
 
 #### ansible.cfg
 
