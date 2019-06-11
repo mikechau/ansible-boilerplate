@@ -23,13 +23,11 @@ If you want to use pipenv, you can skip this step
 
 ### Git clone
 
-- `git clone --depth=1 --branch=master https://github.com/mikechau/ansible-boilerplate.git` - clone the latest copy of the repo
-- `cd ansible-boilerplate && git remote rm origin` - remove the origin
-
-#### Initialize the project (if you use pipenv)
-
-- `pipenv install` - create a project, initialize the virtualenv, and install dependencies
-- `pipenv install --dev molecule docker` - add development dependencies to the project (optionnal)
+- `git clone --depth=1 --branch=master https://github.com/lucasmaurice/ansible-boilerplate.git` - clone the latest copy of the repo
+- `mv ansible-boilerplate ansible-homelab-infrastructure` - rename to the infrastructure name
+- `cd ansible-homelab-infrastructure && git remote rm origin` - remove the origin
+- `git remote add origin git@github.com:lucasmaurice/ansible-homelab-infrastructure.git` - add your own infrastructure origin
+- `git push -u origin master` - push the repository to your own git
 
 ---
 
@@ -66,7 +64,7 @@ project.
 
 This is where you should install your third-party roles from [Ansible Galaxy](https://galaxy.ansible.com/).
 
-Recommended to configure [requirements.yml](requirements.yml) with the third party roles you are
+Recommended to configure [galaxy-requirements.yml](galaxy-requirements.yml) with the third party roles you are
 using.
 
 ##### Read more
