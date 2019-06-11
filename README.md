@@ -3,6 +3,8 @@
 This repo is a boilerplate for getting started for repos containing Ansible
 playbooks. `git clone` this project and be on your merry way.
 
+Forked from the [Ansible Boilerplate](https://github.com/mikechau/ansible-boilerplate) of [Mike Chau](https://github.com/mikechau/) under MIT Licence.
+
 ## Prerequisites
 
 ### Use pyenv and pipenv (recommended)
