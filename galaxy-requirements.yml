@@ -1,0 +1,10 @@
+---
+# Ping role for avoid errors
+- src: thedumbtechguy.ping
+  path: galaxy_roles
+  name: ping
+
+# EXAMPLE
+# - src: github.repo
+#   path: galaxy_roles
+#   name: role.name
