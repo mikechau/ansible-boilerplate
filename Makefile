@@ -26,3 +26,6 @@ galaxy-install: venv
 
 ping: galaxy-install
 	$(VENV_ACTIVATE) && ansible-playbook -i $(inventory) playbooks/ping.yml
+
+tests: galaxy-install
+	$(VENV_ACTIVATE) && ansible-lint playbooks/*.yml
