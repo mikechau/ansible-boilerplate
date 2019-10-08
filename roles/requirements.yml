@@ -1,5 +1,4 @@
 ---
 # EXAMPLE
 # - src: github.repo
-#   path: galaxy_roles
 #   name: role.name

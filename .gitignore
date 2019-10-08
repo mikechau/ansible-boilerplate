@@ -9,3 +9,5 @@ tmp/*
 *.pyc
 *.retry
 inventories/group_vars/*/secret/*
+venv
+log

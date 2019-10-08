@@ -1,0 +1,17 @@
+ansible>=2.8
+ansible-lint>=4.1.0
+asn1crypto>=0.24.0
+bcrypt>=3.1.4
+cffi>=1.11.2
+cryptography>=2.3
+idna>=2.6
+Jinja2>=2.10
+MarkupSafe>=1.0
+netaddr>=0.7.19
+paramiko>=2.4.2
+pyasn1>=0.4.2
+pycparser>=2.18
+PyNaCl>=1.2.1
+PyYAML>=3.12
+six>=1.11.0
+testinfra>=3.0.4
