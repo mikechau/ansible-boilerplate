@@ -12,8 +12,15 @@ $(VENV_NAME)/bin/activate: env-requirements.txt
 	${PYTHON} -m pip install -r env-requirements.txt
 	touch $(VENV_NAME)/bin/activate
 
+################################ GALAXY COMMANDS ################################
+
 galaxy-install: venv
-	$(VENV_ACTIVATE) && ansible-galaxy install -r galaxy-requirements.yml
+	$(VENV_ACTIVATE) && ansible-galaxy install -r roles/requirements.yml --roles-path=galaxy_roles
+
+galaxy-force-update: venv
+	$(VENV_ACTIVATE) && ansible-galaxy install -r roles/requirements.yml --roles-path=galaxy_roles --force-with-deps
+
+############################## DEPLOYMENT COMMANDS ##############################
 
 # deploy-users-new: galaxy-install
 # 	$(VENV_ACTIVATE) && ansible-playbook -i $(inventory) playbooks/users-new.yml --user=$(install_user) -k -K
@@ -23,6 +30,8 @@ galaxy-install: venv
 
 # deploy-common: galaxy-install
 # 	$(VENV_ACTIVATE) && ansible-playbook -i $(inventory) playbooks/common.yml
+
+################################# TEST COMMANDS #################################
 
 ping: galaxy-install
 	$(VENV_ACTIVATE) && ansible-playbook -i $(inventory) playbooks/ping.yml

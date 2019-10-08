@@ -35,9 +35,9 @@ git push -u origin master
 | --------------------------------------------- | ---------------------------------------------------------------------------------- |
 | `make venv`                                   | Create a virtual environement with all the dependency to run ansible               |
 | `make test`                                   | Run all roles molecule tests.                                                      |
-| `galaxy-install`                              | Install missing galaxy roles.                                                      |
-
-
+| `make ping`                                   | Test access to all hosts.                                                      |
+| `make galaxy-install`                              | Install missing galaxy roles.                                                      |
+| `make galaxy-force-update`                              | Reinstall all galaxy roles.                                                      |
 
 ---
 
@@ -52,12 +52,12 @@ git push -u origin master
 ├── notes
 ├── playbooks
 ├── roles
+│   └── requirements.yml
 ├── tmp
 ├── .gitignore
 ├── .travis.yml
 ├── ansible.cfg
 ├── env-requirements.txt
-├── galaxy-requirements.yml
 ├── LICENSE
 ├── log -> /tmp/ansible.log
 ├── Makefile
